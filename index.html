@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento de Pedido</title>
+</head>
+<body>
+    <h2>Rastreie seu pedido</h2>
+    <input type="text" id="codigo" placeholder="Digite seu código">
+    <button onclick="rastrear()">Rastrear</button>
+    <div id="resultado"></div>
+
+    <script>
+        function rastrear() {
+            var codigo = document.getElementById("codigo").value;
+            if (codigo) {
+                window.location.href = "https://status.ondeestameupedido.com/tracking/11011/?codigo=" + codigo;
+            } else {
+                alert("Por favor, digite um código de rastreamento.");
+            }
+        }
+    </script>
+</body>
+</html>
